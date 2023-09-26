@@ -1,0 +1,43 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Регистрация на сайте";
+    ViewData["H1"] = "Регистрация на сайте";
+}
+
+<div class="item">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label asp-for="Input.FirstName"></label>
+            <div></div>
+            <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" />
+            <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            <div></div>
+            <label asp-for="Input.LastName"></label>
+            <div></div>
+            <input asp-for="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" />
+            <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            <div></div>
+            <label asp-for="Input.Email"></label>
+            <div></div>
+            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+            <div></div>
+            <label asp-for="Input.Password"></label>
+            <div></div>
+            <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+            <div></div>
+            <label asp-for="Input.ConfirmPassword"></label>
+            <div></div>
+            <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            
+            <div><br /></div>
+            <button id="registerSubmit" type="submit">Регистрация</button>
+        </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

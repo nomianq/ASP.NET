@@ -1,0 +1,9 @@
+﻿@model List<Item>
+@{
+    ViewData["Title"] = "Главная страница";
+    ViewData["H1"] = "Главная страница";
+}
+
+
+@foreach (Item el in Model)
+    @Html.Partial("ListItems", el)

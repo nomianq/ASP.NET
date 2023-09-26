@@ -1,0 +1,36 @@
+﻿@model Order
+
+@{
+    ViewData["Title"] = "Оформление заказа";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="item">
+    <form method="post" asp-controller="Cart" asp-action="Order" class="order">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" class="error"></span>
+
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname" />
+        <span asp-validation-for="Surname" class="error"></span>
+
+        <label asp-for="Adress"></label>
+        <input asp-for="Adress" />
+        <span asp-validation-for="Adress" class="error"></span>
+
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" />
+        <span asp-validation-for="Phone" class="error"></span>
+
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" class="error"></span>
+
+        <input asp-for="Cart" type="hidden" value="@ViewBag.sessionItems" />
+        <span asp-validation-for="Cart" class="error"></span>
+
+        <input type="submit" value="Оплатить" />
+    </form>
+</div>

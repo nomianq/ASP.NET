@@ -1,0 +1,33 @@
+# Временные файлы
+[Tt]humbs.db
+[Dd]esktop.ini
+[Rr]ehash/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+# Пакеты NuGet
+packages/
+*.nupkg
+# Файлы настроек Visual Studio
+*.suo
+*.user
+*.sln.docstates
+# Файлы журналов и отчеты
+*.log
+*.vscode/
+.vscode/
+# Конфигурационные файлы
+*.config
+# Каталог .vs/
+.vs/
+# Каталоги временных файлов и кеша
+[Tt]emp/
+[Oo]bj/
+[Ii]is[Ii]ntermediate/
+# Файлы окружения
+.env
+.env.local
+.env.*.local
+# Примеры других файлов и каталогов
+node_modules/
+.idea/

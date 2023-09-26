@@ -1,0 +1,25 @@
+﻿@model Blog
+
+@{
+    ViewData["Title"] = "Редактировать";
+    ViewData["H1"] = "Редактировать пост";
+}
+
+<div class="postForm">
+        <form method="post" asp-controller="Blog" asp-action="Edit" class="addEditPostForm">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" />
+            <span asp-validation-for="Title" class="error"></span>
+
+            <label asp-for="Anons"></label>
+            <input asp-for="Anons" />
+            <span asp-validation-for="Anons" class="error"></span>
+
+            <label asp-for="FullText"></label>
+            <input asp-for="FullText" />
+            <span asp-validation-for="FullText" class="error"></span>
+
+            <input type="submit" value="Сохранить" />
+        </form>
+</div>
+

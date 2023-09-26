@@ -1,0 +1,7 @@
+﻿@model ItprogerShop.Models.Item
+
+<div class="item">
+    <a href="/home/product/@Model.Id"><img src="~/img/@Model.Image" /></a>
+    <h1>@Model.Name / @Model.Price.ToString("c")</h1>
+    <p>@Model.Description</p>
+</div>

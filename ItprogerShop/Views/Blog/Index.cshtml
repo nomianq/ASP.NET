@@ -1,0 +1,16 @@
+﻿@model List<Blog>
+@{
+    ViewData["Title"] = "Блог";
+    ViewData["H1"] = "Блог сайта";
+}
+
+@foreach(var el in Model) {
+    <div class="item">
+        <h1>@el.Title</h1>
+        <p>@el.Anons</p>
+        <a asp-controller="Blog" asp-action="Edit" asp-route-id="@el.Id" id="editBtn">Редактировать</a>
+        <form asp-controller="Blog" asp-action="Delete" class="del" asp-route-id="@el.Id" >
+            <input type="submit" value="Удалить" id="deleteBtn"/>
+        </form>
+    </div>
+}
